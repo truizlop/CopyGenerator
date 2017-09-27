@@ -50,7 +50,7 @@ In the snippet above, `person` will have the same fields as person, except the o
 ## License
 
 
-    Copyright 2015 Tomás Ruiz-López
+    Copyright 2017 Tomás Ruiz-López
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
