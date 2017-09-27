@@ -10,18 +10,54 @@
 		114E65481F794878000190A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E65471F794878000190A0 /* AppDelegate.swift */; };
 		114E654A1F794878000190A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114E65491F794878000190A0 /* Assets.xcassets */; };
 		114E654D1F794878000190A0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E654B1F794878000190A0 /* MainMenu.xib */; };
-		114E65591F794878000190A0 /* CopyGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E65581F794878000190A0 /* CopyGeneratorTests.swift */; };
+		114E656A1F79488D000190A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114E65691F79488D000190A0 /* Cocoa.framework */; };
+		114E656D1F79488E000190A0 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E656C1F79488E000190A0 /* SourceEditorExtension.swift */; };
+		114E656F1F79488E000190A0 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E656E1F79488E000190A0 /* SourceEditorCommand.swift */; };
+		114E65741F79488E000190A0 /* CopyEditorExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 114E65671F79488D000190A0 /* CopyEditorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1178AE6B1F7B9C3D00CEFC85 /* GeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178AE6A1F7B9C3D00CEFC85 /* GeneratorTest.swift */; };
+		118892661F7A60E3002448CB /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892651F7A60E3002448CB /* Field.swift */; };
+		1188926D1F7A686C002448CB /* SwiftParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892631F7A6083002448CB /* SwiftParser.swift */; };
+		1188926F1F7A6963002448CB /* SwiftGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188926E1F7A6963002448CB /* SwiftGenerator.swift */; };
+		118892731F7AA981002448CB /* XCSourceEditorCommandInvocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892721F7AA981002448CB /* XCSourceEditorCommandInvocationExtension.swift */; };
+		118892741F7AAB1C002448CB /* SwiftParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892631F7A6083002448CB /* SwiftParser.swift */; };
+		118892751F7AAB71002448CB /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892651F7A60E3002448CB /* Field.swift */; };
+		118892761F7AAB7A002448CB /* SwiftGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188926E1F7A6963002448CB /* SwiftGenerator.swift */; };
+		118892861F7AAE1C002448CB /* FieldExtractionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892851F7AAE1C002448CB /* FieldExtractionTest.swift */; };
+		118892881F7AAFCF002448CB /* ArtifactExtractionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892871F7AAFCF002448CB /* ArtifactExtractionTest.swift */; };
+		1188928A1F7AB19A002448CB /* ConstructorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118892891F7AB19A002448CB /* ConstructorTest.swift */; };
+		119685F11F7AB2810055A15F /* CopyMethodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119685F01F7AB2810055A15F /* CopyMethodTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		114E65551F794878000190A0 /* PBXContainerItemProxy */ = {
+		114E65721F79488E000190A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 114E653C1F794878000190A0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 114E65431F794878000190A0;
-			remoteInfo = CopyGenerator;
+			remoteGlobalIDString = 114E65661F79488D000190A0;
+			remoteInfo = CopyEditorExtension;
+		};
+		1188926B1F7A6818002448CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 114E653C1F794878000190A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 114E65661F79488D000190A0;
+			remoteInfo = CopyEditorExtension;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		114E65781F79488E000190A0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				114E65741F79488E000190A0 /* CopyEditorExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		114E65441F794878000190A0 /* CopyGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,8 +67,23 @@
 		114E654E1F794878000190A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114E654F1F794878000190A0 /* CopyGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CopyGenerator.entitlements; sourceTree = "<group>"; };
 		114E65541F794878000190A0 /* CopyGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopyGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		114E65581F794878000190A0 /* CopyGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyGeneratorTests.swift; sourceTree = "<group>"; };
 		114E655A1F794878000190A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114E65671F79488D000190A0 /* CopyEditorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CopyEditorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		114E65691F79488D000190A0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		114E656C1F79488E000190A0 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		114E656E1F79488E000190A0 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		114E65701F79488E000190A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114E65711F79488E000190A0 /* CopyEditorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CopyEditorExtension.entitlements; sourceTree = "<group>"; };
+		1178AE6A1F7B9C3D00CEFC85 /* GeneratorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorTest.swift; sourceTree = "<group>"; };
+		118892631F7A6083002448CB /* SwiftParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftParser.swift; sourceTree = "<group>"; };
+		118892651F7A60E3002448CB /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		118892671F7A64DC002448CB /* CopyGeneratorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CopyGeneratorTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1188926E1F7A6963002448CB /* SwiftGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGenerator.swift; sourceTree = "<group>"; };
+		118892721F7AA981002448CB /* XCSourceEditorCommandInvocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSourceEditorCommandInvocationExtension.swift; sourceTree = "<group>"; };
+		118892851F7AAE1C002448CB /* FieldExtractionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldExtractionTest.swift; sourceTree = "<group>"; };
+		118892871F7AAFCF002448CB /* ArtifactExtractionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactExtractionTest.swift; sourceTree = "<group>"; };
+		118892891F7AB19A002448CB /* ConstructorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorTest.swift; sourceTree = "<group>"; };
+		119685F01F7AB2810055A15F /* CopyMethodTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMethodTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		114E65641F79488D000190A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114E656A1F79488D000190A0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +117,8 @@
 			children = (
 				114E65461F794878000190A0 /* CopyGenerator */,
 				114E65571F794878000190A0 /* CopyGeneratorTests */,
+				114E656B1F79488E000190A0 /* CopyEditorExtension */,
+				114E65681F79488D000190A0 /* Frameworks */,
 				114E65451F794878000190A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +128,7 @@
 			children = (
 				114E65441F794878000190A0 /* CopyGenerator.app */,
 				114E65541F794878000190A0 /* CopyGeneratorTests.xctest */,
+				114E65671F79488D000190A0 /* CopyEditorExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,10 +148,38 @@
 		114E65571F794878000190A0 /* CopyGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				114E65581F794878000190A0 /* CopyGeneratorTests.swift */,
 				114E655A1F794878000190A0 /* Info.plist */,
+				118892671F7A64DC002448CB /* CopyGeneratorTests-Bridging-Header.h */,
+				118892851F7AAE1C002448CB /* FieldExtractionTest.swift */,
+				118892871F7AAFCF002448CB /* ArtifactExtractionTest.swift */,
+				118892891F7AB19A002448CB /* ConstructorTest.swift */,
+				119685F01F7AB2810055A15F /* CopyMethodTest.swift */,
+				1178AE6A1F7B9C3D00CEFC85 /* GeneratorTest.swift */,
 			);
 			path = CopyGeneratorTests;
+			sourceTree = "<group>";
+		};
+		114E65681F79488D000190A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				114E65691F79488D000190A0 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		114E656B1F79488E000190A0 /* CopyEditorExtension */ = {
+			isa = PBXGroup;
+			children = (
+				114E656C1F79488E000190A0 /* SourceEditorExtension.swift */,
+				114E656E1F79488E000190A0 /* SourceEditorCommand.swift */,
+				114E65701F79488E000190A0 /* Info.plist */,
+				114E65711F79488E000190A0 /* CopyEditorExtension.entitlements */,
+				118892631F7A6083002448CB /* SwiftParser.swift */,
+				118892651F7A60E3002448CB /* Field.swift */,
+				1188926E1F7A6963002448CB /* SwiftGenerator.swift */,
+				118892721F7AA981002448CB /* XCSourceEditorCommandInvocationExtension.swift */,
+			);
+			path = CopyEditorExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +192,12 @@
 				114E65401F794878000190A0 /* Sources */,
 				114E65411F794878000190A0 /* Frameworks */,
 				114E65421F794878000190A0 /* Resources */,
+				114E65781F79488E000190A0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				114E65731F79488E000190A0 /* PBXTargetDependency */,
 			);
 			name = CopyGenerator;
 			productName = CopyGenerator;
@@ -123,12 +215,29 @@
 			buildRules = (
 			);
 			dependencies = (
-				114E65561F794878000190A0 /* PBXTargetDependency */,
+				1188926C1F7A6818002448CB /* PBXTargetDependency */,
 			);
 			name = CopyGeneratorTests;
 			productName = CopyGeneratorTests;
 			productReference = 114E65541F794878000190A0 /* CopyGeneratorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		114E65661F79488D000190A0 /* CopyEditorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114E65751F79488E000190A0 /* Build configuration list for PBXNativeTarget "CopyEditorExtension" */;
+			buildPhases = (
+				114E65631F79488D000190A0 /* Sources */,
+				114E65641F79488D000190A0 /* Frameworks */,
+				114E65651F79488D000190A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CopyEditorExtension;
+			productName = CopyEditorExtension;
+			productReference = 114E65671F79488D000190A0 /* CopyEditorExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -146,8 +255,13 @@
 					};
 					114E65531F794878000190A0 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 114E65431F794878000190A0;
+					};
+					114E65661F79488D000190A0 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -166,6 +280,7 @@
 			targets = (
 				114E65431F794878000190A0 /* CopyGenerator */,
 				114E65531F794878000190A0 /* CopyGeneratorTests */,
+				114E65661F79488D000190A0 /* CopyEditorExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +302,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		114E65651F79488D000190A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -202,17 +324,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114E65591F794878000190A0 /* CopyGeneratorTests.swift in Sources */,
+				1188928A1F7AB19A002448CB /* ConstructorTest.swift in Sources */,
+				118892741F7AAB1C002448CB /* SwiftParser.swift in Sources */,
+				119685F11F7AB2810055A15F /* CopyMethodTest.swift in Sources */,
+				118892861F7AAE1C002448CB /* FieldExtractionTest.swift in Sources */,
+				118892881F7AAFCF002448CB /* ArtifactExtractionTest.swift in Sources */,
+				1178AE6B1F7B9C3D00CEFC85 /* GeneratorTest.swift in Sources */,
+				118892751F7AAB71002448CB /* Field.swift in Sources */,
+				118892761F7AAB7A002448CB /* SwiftGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114E65631F79488D000190A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114E656D1F79488E000190A0 /* SourceEditorExtension.swift in Sources */,
+				1188926F1F7A6963002448CB /* SwiftGenerator.swift in Sources */,
+				118892661F7A60E3002448CB /* Field.swift in Sources */,
+				1188926D1F7A686C002448CB /* SwiftParser.swift in Sources */,
+				118892731F7AA981002448CB /* XCSourceEditorCommandInvocationExtension.swift in Sources */,
+				114E656F1F79488E000190A0 /* SourceEditorCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		114E65561F794878000190A0 /* PBXTargetDependency */ = {
+		114E65731F79488E000190A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 114E65431F794878000190A0 /* CopyGenerator */;
-			targetProxy = 114E65551F794878000190A0 /* PBXContainerItemProxy */;
+			target = 114E65661F79488D000190A0 /* CopyEditorExtension */;
+			targetProxy = 114E65721F79488E000190A0 /* PBXContainerItemProxy */;
+		};
+		1188926C1F7A6818002448CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 114E65661F79488D000190A0 /* CopyEditorExtension */;
+			targetProxy = 1188926B1F7A6818002448CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -337,11 +484,12 @@
 		114E655E1F794878000190A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CopyGenerator/CopyGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = LVEGP727J6;
+				DEVELOPMENT_TEAM = L7RXC8SZH2;
 				INFOPLIST_FILE = CopyGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.CopyGenerator;
@@ -353,11 +501,12 @@
 		114E655F1F794878000190A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CopyGenerator/CopyGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = LVEGP727J6;
+				DEVELOPMENT_TEAM = L7RXC8SZH2;
 				INFOPLIST_FILE = CopyGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.CopyGenerator;
@@ -371,13 +520,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = LVEGP727J6;
+				DEVELOPMENT_TEAM = L7RXC8SZH2;
 				INFOPLIST_FILE = CopyGeneratorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.CopyGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CopyGeneratorTests/CopyGeneratorTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CopyGenerator.app/Contents/MacOS/CopyGenerator";
 			};
@@ -388,15 +540,49 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = LVEGP727J6;
+				DEVELOPMENT_TEAM = L7RXC8SZH2;
 				INFOPLIST_FILE = CopyGeneratorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.CopyGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CopyGeneratorTests/CopyGeneratorTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CopyGenerator.app/Contents/MacOS/CopyGenerator";
+			};
+			name = Release;
+		};
+		114E65761F79488E000190A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CopyEditorExtension/CopyEditorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L7RXC8SZH2;
+				INFOPLIST_FILE = CopyEditorExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.CopyGenerator.CopyEditorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		114E65771F79488E000190A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CopyEditorExtension/CopyEditorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L7RXC8SZH2;
+				INFOPLIST_FILE = CopyEditorExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.CopyGenerator.CopyEditorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -426,6 +612,15 @@
 			buildConfigurations = (
 				114E65611F794878000190A0 /* Debug */,
 				114E65621F794878000190A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114E65751F79488E000190A0 /* Build configuration list for PBXNativeTarget "CopyEditorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114E65761F79488E000190A0 /* Debug */,
+				114E65771F79488E000190A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
